@@ -44,10 +44,10 @@
 </head>
 <body>
     
-    
+    <?php if($landing_page===FALSE): ?>
     <!-- navbar -->
     <nav class="navbar navbar-default" role="navigation">
-    
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -58,18 +58,19 @@
             </button>
             <a class="navbar-brand" href="#"></a>
         </div>
-    
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Messages</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="#"><?= $session->read('profile')['name']; ?></a></li>
+                <li><a href="<?php echo $base_url.'users/logout'; ?>">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
-
+        
     </nav>
     <!-- /. -->
+    <?php endif; ?>
 
     <!-- main container -->
     <div class='container'>

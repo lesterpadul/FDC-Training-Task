@@ -26,10 +26,11 @@ class AppController extends Controller
 		$this->data["base_url"]       = "http://fdc.dev/";
 		
 		$this->data["landing_page"]   = false;
-		
+
 		$this->data['header_styles']  = array(
 								"bower_components/bootstrap/dist/css/bootstrap.css",
-								"bower_components/bootstrap/dist/css/bootstrap.theme.css"
+								"bower_components/bootstrap/dist/css/bootstrap-theme.css",
+								"bower_components/fontawesome/css/font-awesome.css",
 							);
 		$this->data['header_scripts'] = array(
 	    						"bower_components/jquery/dist/jquery.js",
@@ -40,6 +41,8 @@ class AppController extends Controller
 	    						"ng/app.js",
     						);
 
+		$this->data["session"] = $this->request->session();
+		
         parent::initialize();
         $this->loadComponent('Flash');
     }

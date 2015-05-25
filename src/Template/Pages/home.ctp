@@ -1,5 +1,6 @@
 <!-- mainbody -->
 <div class="clearfix"> 
+    
     <div class="col-xs-6">
         <div class="panel panel-default">
             <div class="panel-body">   
@@ -37,6 +38,7 @@
             </div>
         </div>
     </div>
+
     <div class="col-xs-6">
         <div class="panel panel-default">
             <div class="panel-body">
@@ -65,5 +67,6 @@
             </div>
         </div>
     </div>
+
 </div>  
 <!-- /. -->
